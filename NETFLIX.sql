@@ -24,7 +24,7 @@ SELECT
   DISTINCT type
 FROM college.netflix; 
 
--- 15 Business Problems & Solutions
+--  Business Problems & Solutions
 -- 1. Count the number of Movies vs TV Shows
 SELECT 
 	type,
