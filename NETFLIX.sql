@@ -25,12 +25,14 @@ SELECT
 FROM college.netflix; 
 
 --  Business Problems & Solutions
+
 -- 1. Count the number of Movies vs TV Shows
 SELECT 
 	type,
 	COUNT(*)
 FROM college.netflix
 GROUP BY 1;
+
 -- 2. Find the most common rating for movies and TV shows
 SELECT
   type, rating
@@ -48,7 +50,8 @@ WHERE release_year = 2020;
 -- 4. Find all content without a director
 SELECT * FROM college.netflix
 WHERE  director='' ;
--- 5.List all movies that are documentaries
+
+-- 5. List all movies that are documentaries
 SELECT *
 FROM college.netflix;
 SELECT * 
@@ -62,12 +65,13 @@ FROM college.netflix
 GROUP BY listed_in
 ORDER BY content_count DESC;
 
--- 8. List all TV shows with more than 5 seasons
+-- 7. List all TV shows with more than 5 seasons
 SELECT * 
 FROM college.netflix
 WHERE type = 'TV Show' 
 AND CAST(SUBSTRING_INDEX(duration, ' ', 1) AS UNSIGNED) > 5;
--- 9. Identify the longest movie
+
+-- 8. Identify the longest movie
 SELECT * 
 FROM college.netflix
 WHERE type= 'Movie'
